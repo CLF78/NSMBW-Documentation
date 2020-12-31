@@ -70,6 +70,11 @@ struct LinkList {
 	PTMF walkFunc;
 };
 
+
+#ifdef __cplusplus
+}
+#endif
+
 /* Common Classes */
 typedef bool (*ChainedFunc)(void*);
 
@@ -82,6 +87,10 @@ class FunctionChain {
 		void setup(ChainedFunc *functions, u16 count);  // 8015F740
 		void process(u16 startIndex);                   // 8015F760
 };
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /* Common Functions */
 void OSReport(const char *format, ...); // 8015F870
