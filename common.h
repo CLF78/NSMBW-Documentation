@@ -79,50 +79,50 @@ class FunctionChain {
 		u16 count;
 		u16 current;
 
-		void setup(ChainedFunc *functions, u16 count);	// 8015F740
-		void process(u16 startIndex);					// 8015F760
+		void setup(ChainedFunc *functions, u16 count);  // 8015F740
+		void process(u16 startIndex);                   // 8015F760
 };
 
 /* Common Functions */
 void OSReport(const char *format, ...); // 8015F870
 
-int memcmp(const void *ptr1, const void *ptr2, size_t num); 		// 802DF388
-void *memchr(void *ptr, int value, size_t num); 					// 802DF330
-void *memcpy(void *dest, const void *src, size_t count);			// 80004364
-void *memmove(void *destination, const void *source, size_t num);	// 802DF264
-void *memset(void *ptr, int value, size_t num); 					// 800046B4
+int memcmp(const void *ptr1, const void *ptr2, size_t num);         // 802DF388
+void *memchr(void *ptr, int value, size_t num);                     // 802DF330
+void *memcpy(void *dest, const void *src, size_t count);            // 80004364
+void *memmove(void *destination, const void *source, size_t num);   // 802DF264
+void *memset(void *ptr, int value, size_t num);                     // 800046B4
 
-wchar_t *wmemchr(const wchar_t *ptr, wchar_t wc, size_t num);				// 802E24C4
-wchar_t *wmemcpy(wchar_t *destination, const wchar_t *source, size_t num);	// 802E24BC
+wchar_t *wmemchr(const wchar_t *ptr, wchar_t wc, size_t num);               // 802E24C4
+wchar_t *wmemcpy(wchar_t *destination, const wchar_t *source, size_t num);  // 802E24BC
 
-int snprintf(char *buffer, size_t buff_size, const char *format, ...);	// 802E19D8
-int sprintf(char *buffer, const char *format, ...); 					// 802E1ACC
+int snprintf(char *buffer, size_t buff_size, const char *format, ...);  // 802E19D8
+int sprintf(char *buffer, const char *format, ...);                     // 802E1ACC
 
-char *strcat(char *dest, const char *src);			// 802E1D2C
-char *strcpy(char *dest, const char *src);			// 802E1C28
-char *strstr(const char *str1, const char *str2);	// 802E1F78
+char *strcat(char *dest, const char *src);          // 802E1D2C
+char *strcpy(char *dest, const char *src);          // 802E1C28
+char *strstr(const char *str1, const char *str2);   // 802E1F78
 const char *strchr(const char *str, int character); // 802E1F00
-int strcmp(const char *str1, const char *str2); 	// 802E1DA4
-int stricmp(const char *str1, const char *str2);	// 802E8B5C
-int strlen(const char *str);						// 802DC98C
+int strcmp(const char *str1, const char *str2);     // 802E1DA4
+int stricmp(const char *str1, const char *str2);    // 802E8B5C
+int strlen(const char *str);                        // 802DC98C
 
-char *strncat(char *destination, const char *source, size_t num);	// 802E1D58
-char *strncpy(char *dest, const char *src, int num);				// 802E1CE8
-const char *strrchr(const char *str, int character);				// 802E1F30
-int strncmp(const char *str1, const char *str2, int num);			// 802E1EC0
-int strnlen(const char *str, size_t max_len);						// 802244D0
+char *strncat(char *destination, const char *source, size_t num);   // 802E1D58
+char *strncpy(char *dest, const char *src, int num);                // 802E1CE8
+const char *strrchr(const char *str, int character);                // 802E1F30
+int strncmp(const char *str1, const char *str2, int num);           // 802E1EC0
+int strnlen(const char *str, size_t max_len);                       // 802244D0
 
-int wcscmp(const wchar_t *wcs1, const wchar_t *wcs2);				// 802E4788
-int wcslen(const wchar_t *str); 									// 802E470C
-wchar_t *wcschr(const wchar_t *ws, wchar_t wc); 					// 802E47BC
-wchar_t *wcscpy(wchar_t *dest, const wchar_t *src); 				// 802E4728
-wchar_t *wcsncpy(wchar_t *dest, const wchar_t *src, size_t num);	// 802E4744
+int wcscmp(const wchar_t *wcs1, const wchar_t *wcs2);               // 802E4788
+int wcslen(const wchar_t *str);                                     // 802E470C
+wchar_t *wcschr(const wchar_t *ws, wchar_t wc);                     // 802E47BC
+wchar_t *wcscpy(wchar_t *dest, const wchar_t *src);                 // 802E4728
+wchar_t *wcsncpy(wchar_t *dest, const wchar_t *src, size_t num);    // 802E4744
 
 int mbstowcs(wchar_t *dest, const char *src, size_t max); // 802DF0EC
 int wcstombs(char *dest, const wchar_t *src, size_t max); // 802DF1AC
 
-int vprintf(const char *format, ...);								// 802E1850
-int vsnprintf(char *s, size_t n, const char *format, ...);			// 802E18CC
+int vprintf(const char *format, ...);                               // 802E1850
+int vsnprintf(char *s, size_t n, const char *format, ...);          // 802E18CC
 int vswprintf(wchar_t *ws, size_t len, const wchar_t *format, ...); // 802E4680
 
 int atoi(const char *str); // 802E23F8
@@ -132,22 +132,22 @@ void bdcmp(const char *bdsrc, const char *bdest); // 801FA4E4
 void bdcpy(const char *bdsrc, const char *bdest); // 801FA518
 
 /* Math Functions */
-float asin(float x); 			// 802E88FC
-float acos(float x); 			// 802E88F8
-float atan(float x); 			// 802E7F04
-float atan2(float y, float x);	// 802E8900
+float asin(float x);            // 802E88FC
+float acos(float x);            // 802E88F8
+float atan(float x);            // 802E7F04
+float atan2(float y, float x);  // 802E8900
 
-float cos(float x); 	// 802E82AC
-float sin(float x); 	// 802E87B4
-float tan(float x); 	// 802E8880
-float ceil(float x); 	// 802E8134
-float floor(float x); 	// 802E8374
+float cos(float x);     // 802E82AC
+float sin(float x);     // 802E87B4
+float tan(float x);     // 802E8880
+float ceil(float x);    // 802E8134
+float floor(float x);   // 802E8374
 
-float sqrt(float x);		 // 802E8B58
+float sqrt(float x);         // 802E8B58
 float pow(float x, float y); // 802E5894
 
-float log10(float x);	// 802E5780
-float log(float x); 	// 802E54CC
+float log10(float x);   // 802E5780
+float log(float x);     // 802E54CC
 
 float GetHermiteCurveValue(float currentFrame, HermiteKey* keys, u32 keyCount); // 8017D660
 
