@@ -34,7 +34,7 @@ class SZSDecompressor {
 		u32 unk;
 		UncompContextSZS context;
 
-		virtual bool init(void *destp, u32 unk);                // 802B8AB0
+		virtual bool init(void *dest, u32 unk);                 // 802B8AB0
 		virtual int process(const void *data, u32 length);      // 802B8AE0
 		virtual int getHeaderSize();                            // 802B8B20
 		virtual int getUncompressedDataSize(const void *data);  // 802B8B10

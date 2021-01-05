@@ -25,7 +25,7 @@ struct CXCompressionHeader {
 };
 
 struct CXUncompContextLH {
-	u8  *destp;                         // Write-destination pointer: 4B
+	u8   *destp;                        // Write-destination pointer: 4B
 	s32  destCount;                     // Remaining size to write: 4B
 	s32  forceDestCount;                // Forcibly set the decompression size: 4B
 	u16  huffTable9[1024];              // Huffman encoding table: 2048B
@@ -91,7 +91,7 @@ void CXInitUncompContextRL(CXUncompContextRL *context, void *dest);     // 801D6
 void CXInitUncompContextLZ(CXUncompContextLZ *context, void *dest);     // 801D69C0
 
 s32 CXReadUncompLH(CXUncompContextLH *context, const void *data, u32 len);      // 801D70A0
-s32 CXReadUncompLRC(CXUncompContextLRC *context, const void* data, u32 len);    // 801D7E90
+s32 CXReadUncompLRC(CXUncompContextLRC *context, const void *data, u32 len);    // 801D7E90
 s32 CXReadUncompRL(CXUncompContextRL *context, const void *data, u32 len);      // 801D6A00
 s32 CXReadUncompLZ(CXUncompContextLZ *context, const void *data, u32 len);      // 801D6CA0
 

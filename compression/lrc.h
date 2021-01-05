@@ -19,7 +19,7 @@ class LRCDecompressor {
 		u32 unk;
 		CXUncompContextLRC context;
 
-		virtual bool init(void *destp, u32 unk);                // 802B8680
+		virtual bool init(void *dest, u32 unk);                 // 802B8680
 		virtual int process(const void *data, u32 length);      // 802B86B0
 		virtual int getHeaderSize();                            // 802B8B40
 		virtual int getUncompressedDataSize(const void *data);  // 802B8B30

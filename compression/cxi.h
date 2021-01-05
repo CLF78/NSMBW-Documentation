@@ -22,12 +22,12 @@ struct RCState {
 	u32 carry_cnt;  // Only used during compression
 };
 
-static u16 RCGetData(const u8* src, RCCompressionInfo* info, RCState* state, u32 srcCnt, s32* pReadCnt);    // 801D7B30
-static u16 RCSearch(RCCompressionInfo* info, u32 code, u32 range, u32 low);                                 // 801D7A90
-static void RCAddCount(RCCompressionInfo* info, u16 val);                                                   // 801D78A0
+static u16 RCGetData(const u8 *src, RCCompressionInfo *info, RCState *state, u32 srcCnt, s32 *pReadCnt);    // 801D7B30
+static u16 RCSearch(RCCompressionInfo *info, u32 code, u32 range, u32 low);                                 // 801D7A90
+static void RCAddCount(RCCompressionInfo *info, u16 val);                                                   // 801D78A0
 
 /* LH Stuff */
-bool CXiLHVerifyTable(const void* table, u8 bit); // 801D8420
+bool CXiLHVerifyTable(const void *table, u8 bit); // 801D8420
 
 #ifdef __cplusplus
 }
