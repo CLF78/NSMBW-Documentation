@@ -1,16 +1,6 @@
 #pragma once
 #include <common.h>
-#include <compression/cx.h>
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-extern void *LRCDecompClass; // 80377E08
-
-#ifdef __cplusplus
-}
-#endif
+#include <rvl/cx/cx.h>
 
 class LRCDecompressor {
 	public:
@@ -23,6 +13,8 @@ class LRCDecompressor {
 		virtual int process(const void *data, u32 length);      // 802B86B0
 		virtual int getHeaderSize();                            // 802B8B40
 		virtual int getUncompressedDataSize(const void *data);  // 802B8B30
+
+		static LRCDecompressor *instance;  // 80377E08
 };
 
 class LRCFile {

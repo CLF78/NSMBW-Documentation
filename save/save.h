@@ -201,8 +201,10 @@ class SaveFile {
 		SaveBlock *GetBlock(int id);    // 800E0470
 		SaveBlock *GetQSBlock(int id);  // 800E04A0
 
-		static SaveFile *instance;  // 8042A298
-		bool CheckIfWriting();      // 800E0540
+		static void createOnHeap(EGG::Heap *heap); // 800E0270
+		static SaveFile *instance;                 // 8042A298
+
+		bool CheckIfWriting(); // 800E0540
 
 	private:
 		// Checksum updaters

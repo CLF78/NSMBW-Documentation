@@ -1,6 +1,6 @@
 #pragma once
 #include <common.h>
-#include <savefile.h>
+#include <save/save.h>
 
 // SaveHandler state values
 #define SAVEHANDLER_STATE_PERMCHECK     1
@@ -13,8 +13,8 @@
 // Inherits from EGG::Thread, but i'm not sure how big that class is...
 class SaveHandler {
 	public:
-		SaveHandler(OSPriority prio, void *heap);   // 800CED00
-		virtual ~SaveHandler();                     // 800CEEA0
+		SaveHandler(OSPriority prio, EGG::Heap *heap);  // 800CED00
+		virtual ~SaveHandler();                         // 800CEEA0
 
 		u8 unknown[0x54];       // 0x00 (should all be inherited but i am not sure)
 		OSMutex mutex;          // 0x54
@@ -23,8 +23,8 @@ class SaveHandler {
 		u32 CurrentError;       // 0x78
 		u32 IsNewSaveFileMaybe; // 0x7C
 
-		static void createOnHeap(void *heap);   // 800CFBA0
-		static SaveHandler *instance;           // 8042A0F0
+		static void createOnHeap(EGG::Heap *heap);  // 800CFBA0
+		static SaveHandler *instance;               // 8042A0F0
 
 		virtual void run(); // 800CFAC0
 

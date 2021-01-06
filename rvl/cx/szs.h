@@ -5,8 +5,6 @@
 extern "C" {
 #endif
 
-extern void *SZSDecompClass; // 80377E14
-
 // Not part of CX, so not documented properly
 struct UncompContextSZS {
 	u8  *destp;
@@ -38,6 +36,8 @@ class SZSDecompressor {
 		virtual int process(const void *data, u32 length);      // 802B8AE0
 		virtual int getHeaderSize();                            // 802B8B20
 		virtual int getUncompressedDataSize(const void *data);  // 802B8B10
+
+		static SZSDecompressor *instance;  // 80377E14
 
 	private:
 		static int getUncompressedDataSizeInternal(const void *data); // 802B86E0
