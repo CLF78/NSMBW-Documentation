@@ -202,7 +202,7 @@ class SaveFile {
 		SaveBlock *GetQSBlock(int id);  // 800E04A0
 
 		static void createOnHeap(EGG::Heap *heap); // 800E0270
-		static SaveFile *instance;                 // 8042A298
+		static SaveFile *instance;                 // 8042A320
 
 		bool CheckIfWriting(); // 800E0540
 

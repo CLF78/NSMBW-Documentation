@@ -24,7 +24,7 @@ class SaveHandler {
 		u32 IsNewSaveFileMaybe; // 0x7C
 
 		static void createOnHeap(EGG::Heap *heap);  // 800CFBA0
-		static SaveHandler *instance;               // 8042A0F0
+		static SaveHandler *instance;               // 8042A298
 
 		virtual void run(); // 800CFAC0
 

@@ -18,7 +18,7 @@ struct UncompContextSZS {
 	u8  headerSizeMaybe;
 };
 
-void InitUncompContextSZS(CXUncompContextSZS *context, void *dest);         // 802B8710
+void InitUncompContextSZS(UncompContextSZS *context, void *dest);           // 802B8710
 s32 ReadUncompSZS(UncompContextSZS *context, const void *data, u32 len);    // 802B8840
 
 #ifdef __cplusplus
@@ -27,17 +27,14 @@ s32 ReadUncompSZS(UncompContextSZS *context, const void *data, u32 len);    // 8
 
 class SZSDecompressor {
 	public:
-		void *vtable;
-		void *dest;
-		u32 unk;
-		UncompContextSZS context;
-
 		virtual bool init(void *dest, u32 unk);                 // 802B8AB0
 		virtual int process(const void *data, u32 length);      // 802B8AE0
 		virtual int getHeaderSize();                            // 802B8B20
 		virtual int getUncompressedDataSize(const void *data);  // 802B8B10
 
-		static SZSDecompressor *instance;  // 80377E14
+		void *dest;
+		u32 unk;
+		UncompContextSZS context;
 
 	private:
 		static int getUncompressedDataSizeInternal(const void *data); // 802B86E0
@@ -48,4 +45,10 @@ class SZSFile {
 		virtual ~SZSFile();                         // 8016B090
 		virtual SZSDecompressor *getDecompressor(); // 8016C4F0
 		virtual void nullsub_8016C530();
+
+		u8 unk; // 3 for SZS, 4 for RL, 5 for LZ, 7 for LH and 8 for LRC
+		u8 pad[3];
+		const char* fileExtension[];
+
+		static SZSFile instance;  // 80377E14
 };
