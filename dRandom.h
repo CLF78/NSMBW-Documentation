@@ -30,18 +30,18 @@ class dRandom_c {
 		// Using "seed" //
 		//////////////////
 
-		static void setSeed(u32 seed);	// 800B2EB0
-		static u32 getSeed();			// 800B2EC0
+		static void setSeed(u32 seed);  // 800B2EB0
+		static u32 getSeed();           // 800B2EC0
 
-		static u32 getInt(u32 max);		// 800B2EE0
-		static u32 getInt_2(u32 max);	// 800B2ED0
+		static u32 getInt(u32 max);     // 800B2EE0
+		static u32 getInt_2(u32 max);   // 800B2ED0
 
-		static float getFloat();	// 800B2EF0
-		static float getFloat_2();	// 800B2F00
-		static float getFloat_3();	// 800B2F50
+		static float getFloat();    // 800B2EF0
+		static float getFloat_2();  // 800B2F00
+		static float getFloat_3();  // 800B2F50
 
-		static float getFloatMultiplier(float multiplier);			// 800B2F10
-		static float getFloatMultiplierTimes16(float multiplier);	// 800B2F60
+		static float getFloatMultiplier(float multiplier);          // 800B2F10
+		static float getFloatMultiplierTimes16(float multiplier);   // 800B2F60
 
 		/////////////////////
 		// Using "seedAlt" //
@@ -57,17 +57,17 @@ class dRandom_c {
 		// This is used for tilesets
 		static u16 getAltShort(u32 max); // 801614E0
 
-		static float getAltFloat();								// 801614D0
-		static float getAltFloatMultiplier(float multiplier);	// 80161540
+		static float getAltFloat();                             // 801614D0
+		static float getAltFloatMultiplier(float multiplier);   // 80161540
 
 	private:
 		static u32 generateInitialSeed(); // 800D9850
 
-		static u32 seed;	// 8042A224
-		static u32 seedAlt;	// 8042A670
+		static u32 seed;    // 8042A224
+		static u32 seedAlt; // 8042A670
 
 		static u32 getIntWithSeed(u32 *seed, u32 max); // 801615A0
 
-		static float getFloatWithSeed(u32 *seed);	// 801615D0
-		static float getFloatWithSeed_2(u32 *seed);	// 80161620
+		static float getFloatWithSeed(u32 *seed);   // 801615D0
+		static float getFloatWithSeed_2(u32 *seed); // 80161620
 };
