@@ -10,13 +10,13 @@
 #define SAVEHANDLER_STATE_LOAD          5
 #define SAVEHANDLER_STATE_RETURN        6
 
-// Inherits from EGG::Thread, but i'm not sure how big that class is...
-class SaveHandler {
+class SaveHandler : public EGG::Thread {
 	public:
 		SaveHandler(OSPriority prio, EGG::Heap *heap);  // 800CED00
 		virtual ~SaveHandler();                         // 800CEEA0
 
-		u8 unknown[0x54];       // 0x00 (should all be inherited but i am not sure)
+		u8 unknown[0x10];       // 0x40 (could be an instance of nw4r::ut:Link)
+		void *vtable2;          // 0x50
 		OSMutex mutex;          // 0x54
 		OSThreadQueue queue;    // 0x6C
 		u32 CurrentState;       // 0x74
