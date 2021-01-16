@@ -11,10 +11,10 @@ The game uses 2 random number generators, both initialised with the same seed va
 The initial value for the randomness (seed) is calculated as follows (by the function at 800D9850):
 - First, an array of 128 bytes is created.
 - The first 8 bytes of data are the number of ticks the Wii has been powered on.
-- The next 22 bytes come from somewhere deeper in the operating system internals, not sure if/to what extent they can be controlled.
+- The next 22 bytes contain the Wii's name.
 - Then, 2 null bytes follow.
 - Next, it goes through all 4 controllers sequentially and for each of them, it dumps:
-* 12 bytes that might be the rotation of the controller in all 3 axes.
+* 12 bytes that represent the acceleration of the controller on all 3 axes.
 * 8 bytes that represent the X and Y coordinates the controller points to.
 * 4 bytes that represent the distance between the controller and the sensor bar.
 - The game then does a CRC32b checksum over the array, which will be the final seed.

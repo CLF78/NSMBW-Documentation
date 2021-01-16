@@ -1,9 +1,5 @@
 #pragma once
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /* Common Number Types */
 typedef signed long long s64;
 typedef signed int s32;
@@ -69,11 +65,6 @@ struct LinkList {
 	LinkListEntry *firstEntry, *lastEntry;
 	PTMF walkFunc;
 };
-
-
-#ifdef __cplusplus
-}
-#endif
 
 /* Common Classes */
 typedef bool (*ChainedFunc)(void*);
