@@ -1,6 +1,7 @@
 #pragma once
 #include <common.h>
 #include <fbase/dbase/dscene/dScene.h>
+#include <fbase/dbase/dLogoScreen.h>
 
 // dScBoot_c handles most of the actions at boot. It creates the wii strap screen and
 // the controllerInformation screen, it loads the rels and starts the title screen,
@@ -8,10 +9,10 @@
 
 class dScBoot_c : public dScene_c {
 	public:
-		dStateWrapper_c wrappers[2]; // Second wrapper is the main state
+		dStateWrapper_c<dScBoot_c> wrappers[2]; // Second wrapper is the main state
 
-		void *wiiStrap;
 		void *yesNoWindow;
+		dLogoScreen_c *wiiStrap;
 		void *selectCursor;
 		void *controllerInformation;
 
@@ -44,7 +45,7 @@ class dScBoot_c : public dScene_c {
 		static dScBoot_c *instance; // 8042A620
 
 		// States
-		static State StateID_ResetWait;         // 80377708 - Initial state 2
+		static State StateID_ResetWait;         // 80377708 (initial state 2)
 		virtual void beginState_ResetWait();    // 8015C770
 		virtual void executeState_ResetWait();  // 8015C7C0
 		virtual void endState_ResetWait();      // 8015C840 (nullsub)
@@ -59,7 +60,7 @@ class dScBoot_c : public dScene_c {
 		virtual void executeState_ResetFadeIn();    // 8015CBF0
 		virtual void endState_ResetFadeIn();        // 8015CC60
 
-		static State StateID_FadeOutWait;           // 803777C8 - Initial state 1
+		static State StateID_FadeOutWait;           // 803777C8 (initial state 1)
 		virtual void beginState_FadeOutWait();      // 8015CDF0 (nullsub)
 		virtual void executeState_FadeOutWait();    // 8015CE00
 		virtual void endState_FadeOutWait();        // 8015CE70 (nullsub)
