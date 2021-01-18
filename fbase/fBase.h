@@ -5,9 +5,7 @@
 // Forward declaration
 class fBase_c;
 
-#ifdef __cplusplus
 extern "C" {
-#endif
 
 fBase_c *createChildObject(Actors name, fBase_c *parent, int settings, char unk);    // 80162C40
 fBase_c *createObject(Actors name, int settings, char unk);                          // 80162C60
@@ -15,9 +13,7 @@ fBase_c *createObject(Actors name, int settings, char unk);                     
 // Used by the above two. DO NOT USE.
 fBase_c *createChildUnderTree(Actors name, fBase_c *parent, int settings, char unk); // 80162BB0
 
-#ifdef __cplusplus
 }
-#endif
 
 class fBase_c {
 	public:
@@ -32,10 +28,10 @@ class fBase_c {
 		u32 settings;
 		Actors name;
 
-		u8 wasCreated;
-		u8 wasDestroyed;
-		u8 wasCreatedInstantly;
-		u8 wasCreationDelayed;
+		u8 isCreated;
+		u8 isDeleted;
+		u8 isNotDeferred;
+		u8 isDeferred;
 		Basetype type;
 		u8 currentProcessID; // &1 = connect, &2 = create, &4 = execute, &8 = delete, &16 = draw
 

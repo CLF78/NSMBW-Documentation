@@ -21,7 +21,7 @@ class SaveHandler : public EGG::Thread {
 		OSThreadQueue queue;    // 0x6C
 		u32 CurrentState;       // 0x74
 		u32 CurrentError;       // 0x78
-		u32 IsNewSaveFileMaybe; // 0x7C
+		u32 DoesSaveFileExist;  // 0x7C
 
 		static void createOnHeap(EGG::Heap *heap);  // 800CFBA0
 		static SaveHandler *instance;               // 8042A298

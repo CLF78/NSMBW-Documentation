@@ -47,7 +47,6 @@ class SZSFile {
 		virtual void nullsub_8016C530();
 
 		u8 unk; // 3 for SZS, 4 for RL, 5 for LZ, 7 for LH and 8 for LRC
-		u8 pad[3];
 		const char* fileExtension;
 
 		static SZSFile instance;  // 80377E14

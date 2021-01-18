@@ -29,9 +29,6 @@ extern "C" {
 // Function that saves the game. USE THIS ONE WHEN SAVING.
 void SaveGame(void *classDoesntMatter, bool isQuick); // 8092F5F0
 
-// Overwrites the existing savefile instance. USE WITH CAUTION.
-void CreateAllNewSavefile(); // 8015D670
-
 // Other functions
 void UpdateCompletionStats();   // 800B5450
 void SaveCurrentMapLocation();  // 800FD300
