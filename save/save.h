@@ -44,8 +44,8 @@ class SaveFirstBlock {
 		u8 field_01;                // 0x05
 		u8 current_file;            // 0x06
 		u8 field_03;                // 0x07
-		u16 freemode_fav[10][0x2A]; // 0x08
-		u16 coinbtl_fav[10][0x2A];  // 0x350
+		u16 freemode_fav[10][42];   // 0x08
+		u16 coinbtl_fav[10][42];    // 0x350
 		u16 bitfield;               // 0x698
 		u16 field_69A;              // 0x69A
 		u32 checksum;               // 0x69C

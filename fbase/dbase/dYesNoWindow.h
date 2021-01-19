@@ -86,7 +86,7 @@ class dYesNoWindow_c : public dBase_c {
 
 		static u32 messageIDs[29];                  // 8076A5F8 (see list at the beginning of the file)
 		static DefaultChoice defaultChoices[29];    // 8076A6C4
-		static bool buttonVisible[3][29];           // 8076A66C (first entry is Yes button, second entry is No button, third entry is OK button)
+		static bool buttonVisible[29][3];           // 8076A66C (first entry is Yes button, second entry is No button, third entry is OK button)
 
 		// States
 		static State StateID_InitWait;         // 8076D478 (initial state)
