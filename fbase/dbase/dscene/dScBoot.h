@@ -2,6 +2,7 @@
 #include <common.h>
 #include <fbase/dbase/dscene/dScene.h>
 #include <fbase/dbase/dLogoScreen.h>
+#include <fbase/dbase/dYesNoWindow.h>
 
 // dScBoot_c handles most of the actions at boot. It creates the wii strap screen and
 // the controllerInformation screen, it loads the rels and starts the title screen,
@@ -11,8 +12,8 @@ class dScBoot_c : public dScene_c {
 	public:
 		dStateWrapper_c<dScBoot_c> wrappers[2]; // Second wrapper is the main state
 
-		void *yesNoWindow;
 		dLogoScreen_c *wiiStrap;
+		dYesNoWindow_c *yesNoWindow;
 		void *selectCursor;
 		void *controllerInformation;
 
