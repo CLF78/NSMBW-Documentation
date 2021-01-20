@@ -2,6 +2,8 @@
 #include <common.h>
 #include <fbase/dbase/dBase.h>
 
+// dSelectCursor_c are the four corner thingies around buttons in the menus. NewerSMBW made them transparent, so they cannot normally be seen.
+
 class SelectCursorSubclass {
 	public:
 		m2d::EmbedLayout_c layout;                                                  // 0x000
@@ -23,7 +25,7 @@ class SelectCursorSubclass {
 		u8 basePositionY;                                                           // 0x259 (0 = right, 1 = center, 2 = left)
 		u32 unk3;                                                                   // 0x25C (set to 0xFF by updatePane)
 		u8 unk4;                                                                    // 0x260 (will hide cursor if set to anything other than 0)
-																					// Total class size = 0x264
+		                                                                            // Total class size = 0x264
 		SelectCursorSubclass();     // 8010C1D0
 		~SelectCursorSubclass();    // 8010C220
 };
