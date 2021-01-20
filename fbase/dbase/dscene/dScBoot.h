@@ -3,6 +3,7 @@
 #include <fbase/dbase/dscene/dScene.h>
 #include <fbase/dbase/dLogoScreen.h>
 #include <fbase/dbase/dYesNoWindow.h>
+#include <fbase/dbase/dSelectCursor.h>
 
 // dScBoot_c handles most of the actions at boot. It creates the wii strap screen and
 // the controllerInformation screen, it loads the rels and starts the title screen,
@@ -14,7 +15,7 @@ class dScBoot_c : public dScene_c {
 
 		dLogoScreen_c *wiiStrap;
 		dYesNoWindow_c *yesNoWindow;
-		void *selectCursor;
+		dSelectCursor_c *selectCursor;
 		void *controllerInformation;
 
 		u8 saveCreationSuccessful;  // Unused if savefile exists on NAND
