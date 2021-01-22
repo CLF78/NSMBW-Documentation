@@ -1,16 +1,16 @@
 #pragma once
 #include <common.h>
-#include <dEffectBreakBase.h>
+#include <dEffActorBase.h>
 
-class dEffectBreakMgr_c {
+class dEffActorMng_c {
 	public:
-		dEffectBreakMgr_c();    // 80092300
-		~dEffectBreakMgr_c();   // 80092310
+		dEffActorMng_c();    // 80092300
+		~dEffActorMng_c();   // 80092310
 
 		u16 count; // Only incremented/decremented once per class
 
-		static dEffectBreakMgr_c *instance; // 8042A1C8
-		static LinkList effectBreakList;    // 8042A1D0
+		static dEffActorMng_c *instance; // 8042A1C8
+		static LinkList effectActorList; // 8042A1D0
 
 		void execute(); // 800923D0
 		void draw();    // 80092480
@@ -19,12 +19,12 @@ class dEffectBreakMgr_c {
 		// See the subclasses for more information on the settings
 		bool spawnBlockShard(Vec3 *pos, u32 settings, u8 playerID);     // 800925F0
 		bool spawnIceShard(Vec3 *pos, u32 settings, u8 playerID);       // 80092720
-		bool spawnModeledShard(Vec3 *pos, u32 settings, u8 playerID);   // 80092830
+		bool spawnModelShard(Vec3 *pos, u32 settings, u8 playerID);     // 80092830
 		bool spawnLiquidEffect(Vec3 *pos, u32 settings, u8 playerID);   // 80092830
 		bool spawnChompShard(Vec3 *pos, u32 settings, u8 playerID);     // 80092AD0
 
 	private:
-		bool prepare(dEffectBreakBase_c *ef, Vec3 *pos, u32 settings, u8 playerID); // 80092370
+		bool prepare(dEffActorBase_c *ef, Vec3 *pos, u32 settings, u8 playerID); // 80092370
 
 		void cleanup();     // 800924E0
 		void cleanupAll();  // 80092570

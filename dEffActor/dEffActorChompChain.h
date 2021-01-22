@@ -1,9 +1,9 @@
 #pragma once
 #include <common.h>
-#include <dEffectBreakBase.h>
+#include <dEffActorBase.h>
 
 // This one is used for when the player ground pounds Chain Chomp poles. No settings here...
-class dEffectBreakChompChain_c : public dEffectBreakBase_c {
+class dEffActorChompChain_c : public dEffActorBase_c {
 	public:
 		mAllocator_c allocator;
 		nw4r::g3d::ResFile *resfile;
@@ -14,16 +14,16 @@ class dEffectBreakChompChain_c : public dEffectBreakBase_c {
 		S16Vec rotations[6];
 
 		// Model data
-		static const char* EffectBreakChainMDLList[2][]; // 80427D28
+		static const char* EffActorChainMDLList[2][]; // 80427D28
 
 		// Velocity data
 		// The game writes the speeds in the setupVelocities function (but only the ones for the X and Y axes, the Z ones are written directly in the class)
 		static bool areChainSpeedsWritten;           // 8042A1C0
 		static float explosionChainVelocities[6][2]; // 803563A0
 
-		virtual ~dEffectBreakChompChain_c(); // 80091E90
+		virtual ~dEffActorChompChain_c(); // 80091E90
 
-		virtual void init();    // 80091860
+		virtual void create();    // 80091860
 		virtual void execute(); // 800918D0
 		virtual void draw();    // 80091930
 		virtual void cleanup(); // 80091990

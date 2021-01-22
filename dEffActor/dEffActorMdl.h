@@ -1,6 +1,6 @@
 #pragma once
 #include <common.h>
-#include <dEffectBreakBase.h>
+#include <dEffActorBase.h>
 
 /* Settings: ((Type << 8) & FF) | (VelocityChange & 3)
 
@@ -14,24 +14,24 @@ Types:
 
 VelocityChange = (see below) */
 
-class dEBBM_Item {
+class dEAM_Item {
 	public:
-		dEBBM_Item();   // 800929E0
-		~dEBBM_Item();  // 800908B0
+		dEAM_Item();   // 800929E0
+		~dEAM_Item();  // 800908B0
 
 		float x, y, z;
 		float xVel, yVel, zVel;
 		u32 unk;
 };
 
-class dEffectBreakMdl_c : public dEffectBreakBase_c {
+class dEffActorMdl_c : public dEffActorBase_c {
 	public:
 		mAllocator_c allocator;
 		nw4r::g3d::ResFile *resfile;
 
 		m3d::mdl_c models[4];
 		m3d::anmClr_c anims[4];
-		dEBBM_Item items[4];
+		dEAM_Item items[4];
 		Vec3 positionsMaybe[4];
 
 		u32 shardCount;
@@ -51,9 +51,9 @@ class dEffectBreakMdl_c : public dEffectBreakBase_c {
 		static float explosionMdlXYOffsets[4][2];   // 80356300 (one set of 2 for each piece)
 		static float explosionMdlVelocities[4][4];  // 80356320 (uses VelocityChange flag to determine the correct index)
 
-		virtual ~dEffectBreakMdl_c(); // 800907D0
+		virtual ~dEffActorMdl_c(); // 800907D0
 
-		virtual void init();    // 8008FE30
+		virtual void create();  // 8008FE30
 		virtual void execute(); // 80090230
 		virtual void draw();    // 800903C0
 		virtual void cleanup(); // 80090430

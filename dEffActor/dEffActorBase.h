@@ -1,22 +1,22 @@
 #pragma once
 #include <common.h>
 
-class dEffectBreakBase_c {
+class dEffActorBase_c {
 	public:
-		// Constructor is inlined, use dEffectBreakMgr to spawn any subclass
-		virtual ~dEffectBreakBase_c(); // 800908F0
+		// Constructor is inlined, use dEffActorMng to spawn any subclass
+		virtual ~dEffActorBase_c(); // 800908F0
 
 		virtual void cleanup(); // 80090960
 		virtual void draw();    // 80090970
 		virtual void execute(); // 80090980
-		virtual void init();    // 80090990
+		virtual void create();    // 80090990
 
 		float x, y, z;
-		float xVelocity, yVelocity, zVelocity;
-		float xMaxVelocity, yMaxVelocity, zMaxVelocity;
+		float xVel, yVel, zVel;
+		float xMaxVel, yMaxVel, zMaxVel;
 		float xScale, yScale, zScale;
 
-		s16 xRotation, yRotation, zRotation;
+		s16 xRot, yRot, zRot;
 
 		float yAccel;
 
