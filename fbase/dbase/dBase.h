@@ -1,18 +1,15 @@
 #pragma once
 #include <fbase/fBase.h>
 
+// Some sort of group controller, perhaps? According to Treeki it's used primarily by BgGm
 class dBaseLink {
 
-	// Some sort of group controller, perhaps? According to Treeki it's used primarily by BgGm
-	// Unk should be the offset to the class in the child
-	// Unk2 should be a pointer to the unk's first field
-
-	void link(void *unk, void *unk2);   // 80161890
-	void unlink(void *unk, void *unk2); // 80161940
+	void link(void *child, void *parent);   // 80161890
+	void unlink(void *child, void *parent); // 80161940
 
 	void clear(); // 80161A00
 
-	static void sub_80161880(); // Nullsub, useful as a potential hook
+	void sub_80161880(); // Nullsub, useful as a potential hook
 };
 
 class dBase_c : public fBase_c {
