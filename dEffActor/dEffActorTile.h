@@ -22,8 +22,8 @@ class dEAT_Item1 {
 		dEAT_Item1();	// 80092700
 		~dEAT_Item1();	// 800910C0
 
-		float x, y, z;
-		float xVel, yVel, zVel;
+		Vec3 pos;
+		Vec3 velocity;
 		u8 _18, _19;
 		u8 pad[2];
 };

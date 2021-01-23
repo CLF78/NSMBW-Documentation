@@ -19,8 +19,8 @@ class dEAM_Item {
 		dEAM_Item();   // 800929E0
 		~dEAM_Item();  // 800908B0
 
-		float x, y, z;
-		float xVel, yVel, zVel;
+		Vec3 pos;
+		Vec3 velocity;
 		u32 unk;
 };
 

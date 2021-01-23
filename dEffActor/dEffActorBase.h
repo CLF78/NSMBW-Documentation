@@ -11,12 +11,12 @@ class dEffActorBase_c {
 		virtual void execute(); // 80090980
 		virtual void create();    // 80090990
 
-		float x, y, z;
-		float xVel, yVel, zVel;
-		float xMaxVel, yMaxVel, zMaxVel;
-		float xScale, yScale, zScale;
+		Vec3 pos;
+		Vec3 velocity;
+		Vec3 maxVelocity;
+		Vec3 scale;
 
-		s16 xRot, yRot, zRot;
+		S16Vec rotation;
 
 		float yAccel;
 

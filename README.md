@@ -3,4 +3,4 @@ Documentation on data structures and class definitions used in New Super Mario B
 
 Note: All addresses found in the files are for the PAL v1 version of the game.
 
-Credits go to Ninji for doing most of the RE work. Other credits are mentioned where due.
+Credits go to Ninji for doing most of the RE work and to Grop for keeping my idiocy in check. Other credits are mentioned where due.
