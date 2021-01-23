@@ -2,7 +2,7 @@
 #include <common.h>
 #include <dEffActorBase.h>
 
-/* Settings: ((Type << 4) & 3) | (SomeFlag & 1)
+/* Settings: ((Type & 3) << 4) | (SomeFlag & 1)
 
 Types:
 0/3 = Small Ice Piece

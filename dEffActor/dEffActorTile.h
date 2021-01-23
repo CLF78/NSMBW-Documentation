@@ -44,7 +44,7 @@ class dEffActorTile_c : public dEffActorBase_c {
 
 		u32 shardCount;
 		u32 doesCycleField19;
-		u32 typeMaybe;
+		u32 type;
 
 		dEAT_Item2 items2[4];	// Used to link with the parent actor through dBaseLink
 

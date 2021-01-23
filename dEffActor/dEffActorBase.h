@@ -9,7 +9,7 @@ class dEffActorBase_c {
 		virtual void cleanup(); // 80090960
 		virtual void draw();    // 80090970
 		virtual void execute(); // 80090980
-		virtual void create();    // 80090990
+		virtual void create();  // 80090990
 
 		Vec3 pos;
 		Vec3 velocity;

@@ -2,7 +2,7 @@
 #include <common.h>
 #include <dEffActorBase.h>
 
-/* Settings: ((Layer << 0x10) & 1) | (Type & 0xF)
+/* Settings: ((Layer & 1) << 0x10) | (Type & 0xF)
 
 Types (no idea of the differences):
 0/1/2 = Water

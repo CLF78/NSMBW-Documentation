@@ -2,7 +2,7 @@
 #include <common.h>
 #include <dEffActorBase.h>
 
-/* Settings: ((Type << 8) & FF) | (VelocityChange & 3)
+/* Settings: ((Type & FF) << 8) | (VelocityChange & 3)
 
 Types:
 - 0 = Giant Brick Block
