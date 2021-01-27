@@ -17,7 +17,7 @@ class dEffActorLiquid_c : public dEffActorBase_c {
 		u32 layer;
 		EGG::Effect effect;
 
-		static const char* EffActorLiquidEfList[8][]; // 803118C8
+		static const char* EffActorLiquidEfList[8]; // 803118C8
 
 		virtual ~dEffActorLiquid_c(); // 80092200
 

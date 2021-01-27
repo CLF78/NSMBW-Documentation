@@ -49,7 +49,7 @@ class dEffActorTile_c : public dEffActorBase_c {
 		dEAT_Item2 items2[4];	// Used to link with the parent actor through dBaseLink
 
 		// Values = (0x100 * Slot) + (0x10 * Row) + Column
-		static u16 explosionTileNumbers[9][4]; // 802F06D8
+		static u16 explosionTileNumbers[9*4]; // 802F06D8
 		
 		/* How it works:
 		- First, the game picks a random number between 0 and 0x8000, and checks if it's odd or even
@@ -58,7 +58,7 @@ class dEffActorTile_c : public dEffActorBase_c {
 		* The first two floats are used as X and Y position offsets (with some other maths i cba to explain here)
 		* The remaining floats are set as the shard's X and Y speed based on the VelocityChange flag in the settings
 		* If the VelocityChange type is 2, 16.0 is added to the Y speed */
-		static float explosionTileVelocities[4][4][10]; // 80311658
+		static float explosionTileVelocities[4][4*10]; // 80311658
 
 		virtual ~dEffActorTile_c(); // 80090F80
 

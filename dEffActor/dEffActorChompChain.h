@@ -14,12 +14,12 @@ class dEffActorChompChain_c : public dEffActorBase_c {
 		S16Vec rotations[6];
 
 		// Model data
-		static const char* EffActorChainMDLList[2][]; // 80427D28
+		static const char* EffActorChainMDLList[2]; // 80427D28
 
 		// Velocity data
 		// The game writes the speeds in the setupVelocities function (but only the ones for the X and Y axes, the Z ones are written directly in the class)
 		static bool areChainSpeedsWritten;           // 8042A1C0
-		static float explosionChainVelocities[6][2]; // 803563A0
+		static float explosionChainVelocities[6*2];  // 803563A0
 
 		virtual ~dEffActorChompChain_c(); // 80091E90
 

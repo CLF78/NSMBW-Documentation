@@ -29,14 +29,14 @@ class dEffActorIce_c : public dEffActorBase_c {
 		virtual void cleanup(); // 80091230
 
 		// Model data
-		static const char* EffActorIceARCList[4][];      // 803116A0
-		static const char* EffActorIceBRRESList[4][];    // 803116E0
-		static const char* EffActorIceMDLList[4][3][];   // 80311778
+		static const char* EffActorIceARCList[4];      // 803116A0
+		static const char* EffActorIceBRRESList[4];    // 803116E0
+		static const char* EffActorIceMDLList[4*3];    // 80311778
 
 		// Velocity data
 		// The game writes the speeds in the setupVelocities function (but only the ones for the X and Y axes, the Z ones are written directly in the class)
 		static bool areIceSpeedsWritten;                // 8042A1B8
-		static float explosionIceVelocities[2][4][2];   // 80356360
+		static float explosionIceVelocities[2*4*2];     // 80356360
 
 	private:
 		void loadModels();   // 800912A0

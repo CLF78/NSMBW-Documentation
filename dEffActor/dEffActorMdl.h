@@ -39,17 +39,17 @@ class dEffActorMdl_c : public dEffActorBase_c {
 		u32 type;
 
 		// Model data
-		static const char* EffectBreakMdlARCList[10][];      // 803112F8
-		static const char* EffectBreakMdlBRRESList[10][];    // 803113B8
-		static const char* EffectBreakMdlMDLList[10][4][];   // 80311568
+		static const char* EffectBreakMdlARCList[10];        // 803112F8
+		static const char* EffectBreakMdlBRRESList[10];      // 803113B8
+		static const char* EffectBreakMdlMDLList[10*4];      // 80311568
 		static BufferOption EffectBreakMdlBufferOptions[10]; // 802F0430
 
 		// Velocity data
 		// The game writes positions and velocities in the init function in an utterly messy way...
 		static bool areModelOffsetsWritten;         // 8042A1B0
 		static bool areModelSpeedsWritten;          // 8042A1B1
-		static float explosionMdlXYOffsets[4][2];   // 80356300 (one set of 2 for each piece)
-		static float explosionMdlVelocities[4][4];  // 80356320 (uses VelocityChange flag to determine the correct index)
+		static float explosionMdlXYOffsets[4*2];    // 80356300 (one set of 2 for each piece)
+		static float explosionMdlVelocities[4*4];   // 80356320 (uses VelocityChange flag to determine the correct index)
 
 		virtual ~dEffActorMdl_c(); // 800907D0
 

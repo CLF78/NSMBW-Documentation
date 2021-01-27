@@ -30,5 +30,5 @@ class dEffActorBase_c {
 
 	private:
 		void addVectorToPosition(Vec3 *vec);    // 80092290
-		void updateYVelocity();                 // 800922D0
+		void calcSpeedY();                      // 800922D0
 };

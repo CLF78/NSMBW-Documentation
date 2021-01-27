@@ -4,18 +4,18 @@
 struct StartLevelInfo {
 
 	enum MovieType : u8 {
-		SUPERSKILLS = 0,
-		INFINITE1UP = 1,
-		STARCOINS = 2,
-		SECRETEXIT = 3,
+		SUPER_SKILLS = 0,
+		INFINITE_1UP = 1,
+		STAR_COINS = 2,
+		SECRET_EXIT = 3,
 	};
 
 	enum ScreenType {
 		NORMAL = 0,
-		SGUIDE = 1,
+		SUPER_GUIDE = 1,
 		TITLE = 2,
-		TITLEREPLAY = 3,
-		HINTMOVIE = 4,
+		TITLE_REPLAY = 3,
+		HINT_MOVIE = 4,
 	};
 
 	u32 replayDuration;     // 0x00 (in frames, max value 0x3840 aka 4 minutes)
